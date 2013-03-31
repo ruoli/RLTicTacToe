@@ -7,7 +7,9 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "GridModel.h"
+#import "NSMutableArray+MultidimensionalAdditions.h"
 
 @interface RLTicTacToeTests : SenTestCase
-
+@property(strong,nonatomic)GridModel *girdmodel;
 @end

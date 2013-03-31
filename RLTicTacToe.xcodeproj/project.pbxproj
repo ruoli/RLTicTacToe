@@ -24,6 +24,10 @@
 		18842B5C170612EB005B77E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18842B34170612EB005B77E4 /* Foundation.framework */; };
 		18842B64170612EB005B77E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18842B62170612EB005B77E4 /* InfoPlist.strings */; };
 		18842B67170612EB005B77E4 /* RLTicTacToeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18842B66170612EB005B77E4 /* RLTicTacToeTests.m */; };
+		18842B721706158B005B77E4 /* GridModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18842B711706158B005B77E4 /* GridModel.m */; };
+		18842B731706158B005B77E4 /* GridModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18842B711706158B005B77E4 /* GridModel.m */; };
+		18842B7617067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18842B7517067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m */; };
+		18842B7717067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18842B7517067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		18842B63170612EB005B77E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		18842B65170612EB005B77E4 /* RLTicTacToeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RLTicTacToeTests.h; sourceTree = "<group>"; };
 		18842B66170612EB005B77E4 /* RLTicTacToeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RLTicTacToeTests.m; sourceTree = "<group>"; };
+		18842B701706158B005B77E4 /* GridModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridModel.h; sourceTree = "<group>"; };
+		18842B711706158B005B77E4 /* GridModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridModel.m; sourceTree = "<group>"; };
+		18842B7417067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+MultidimensionalAdditions.h"; sourceTree = "<group>"; };
+		18842B7517067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+MultidimensionalAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,10 @@
 				18842B4D170612EB005B77E4 /* MainStoryboard_iPad.storyboard */,
 				18842B50170612EB005B77E4 /* ViewController.h */,
 				18842B51170612EB005B77E4 /* ViewController.m */,
+				18842B7417067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.h */,
+				18842B7517067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m */,
+				18842B701706158B005B77E4 /* GridModel.h */,
+				18842B711706158B005B77E4 /* GridModel.m */,
 				18842B39170612EB005B77E4 /* Supporting Files */,
 			);
 			path = RLTicTacToe;
@@ -277,6 +289,8 @@
 				18842B3F170612EB005B77E4 /* main.m in Sources */,
 				18842B43170612EB005B77E4 /* AppDelegate.m in Sources */,
 				18842B52170612EB005B77E4 /* ViewController.m in Sources */,
+				18842B721706158B005B77E4 /* GridModel.m in Sources */,
+				18842B7617067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18842B67170612EB005B77E4 /* RLTicTacToeTests.m in Sources */,
+				18842B731706158B005B77E4 /* GridModel.m in Sources */,
+				18842B7717067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +483,7 @@
 				18842B6C170612EB005B77E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18842B6D170612EB005B77E4 /* Build configuration list for PBXNativeTarget "RLTicTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +492,7 @@
 				18842B6F170612EB005B77E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
