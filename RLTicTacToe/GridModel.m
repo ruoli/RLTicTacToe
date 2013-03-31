@@ -90,6 +90,7 @@
 
 -(NSString *)checkWinner
 {
+    //test git
     return [self getDiagonal:0];
 }
 
