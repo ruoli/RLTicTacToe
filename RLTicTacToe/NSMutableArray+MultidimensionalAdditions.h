@@ -12,19 +12,17 @@
 
 
 
-- (id)initWithCols:(NSUInteger)intCols
-              withRows:(NSUInteger)intRow;
+- (id)initWithX:(NSUInteger)x
+              withY:(NSUInteger)y;
 
 - (void)setObject:(NSString *)object
-      withCols:(NSUInteger)intCol
-         withRows:(NSUInteger)intRow;
+      withX:(NSUInteger)x
+         withY:(NSUInteger)y;
 
-- (void)removeObjectAtCols:(NSUInteger)intCol
-                    atRows:(NSUInteger)intRow;
+- (void)removeObjectAtX:(NSUInteger)intCol
+                    atY:(NSUInteger)intRow;
 
-- (id)getObjectInCols:(NSUInteger)intCol
-             withRows:(NSUInteger)intRow;
+- (id)getObjectInX:(NSUInteger)x
+             withY:(NSUInteger)y;
 
-+ (id)sectionArrayWithCols:(NSUInteger)intCols
-                  withRows:(NSUInteger)intRow;
 @end

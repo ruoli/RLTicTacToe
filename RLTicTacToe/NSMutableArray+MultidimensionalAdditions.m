@@ -11,16 +11,16 @@
 @implementation NSMutableArray (MultidimensionalAdditions)
 
 
-- (id)initWithCols:(NSUInteger)intCols
-              withRows:(NSUInteger)intRow{
+- (id)initWithX:(NSUInteger)x
+              withY:(NSUInteger)y{
     NSUInteger i;
     NSUInteger j;
     NSMutableArray *map;
     if ((self = [self init])) {
-        map = [[NSMutableArray alloc] initWithCapacity:intCols];
-        for (i=0; i < intCols; i++) {
-            NSMutableArray *row = [NSMutableArray arrayWithCapacity:intRow];
-            for (j=0; j < intRow; j++) {
+        map = [[NSMutableArray alloc] initWithCapacity:x];
+        for (i=0; i < x; i++) {
+            NSMutableArray *row = [NSMutableArray arrayWithCapacity:y];
+            for (j=0; j < y; j++) {
                 [row insertObject:@"empty" atIndex:j];
             }
             [map addObject:row];
@@ -31,26 +31,21 @@
 }
 
 - (void)setObject:(NSString *)object
-      withCols:(NSUInteger)intCol
-         withRows:(NSUInteger)intRow{
-    [[self objectAtIndex:intCol] replaceObjectAtIndex:intRow withObject:object];
+      withX:(NSUInteger)x
+         withY:(NSUInteger)y{
+    [[self objectAtIndex:x] replaceObjectAtIndex:y withObject:object];
     
 }
 
-- (void)removeObjectAtCols:(NSUInteger)intCol
-                    atRows:(NSUInteger)intRow
+- (void)removeObjectAtX:(NSUInteger)x
+                    atY:(NSUInteger)y
 {
-    [[self objectAtIndex:intCol] replaceObjectAtIndex:intRow withObject:@"empty"];
+    [[self objectAtIndex:x] replaceObjectAtIndex:y withObject:@"empty"];
 }
 
-- (id)getObjectInCols:(NSUInteger)intCol
-             withRows:(NSUInteger)intRow{
-    return [[self objectAtIndex:intCol] objectAtIndex:intRow];
-}
-
-+ (id)sectionArrayWithCols:(NSUInteger)intCols
-                      withRows:(NSUInteger)intRow{
-    return [[self alloc] initWithCols:intCols withRows:intRow] ;
+- (id)getObjectInX:(NSUInteger)x
+             withY:(NSUInteger)y{
+    return [[self objectAtIndex:x] objectAtIndex:y];
 }
 
 @end
