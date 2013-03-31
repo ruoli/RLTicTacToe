@@ -35,16 +35,12 @@
          withRows:(NSUInteger)intRow{
     [[self objectAtIndex:intCol] replaceObjectAtIndex:intRow withObject:object];
     
-    //debug output
-    NSLog(@"something in here?: %@", self);
 }
 
 - (void)removeObjectAtCols:(NSUInteger)intCol
                     atRows:(NSUInteger)intRow
 {
     [[self objectAtIndex:intCol] replaceObjectAtIndex:intRow withObject:@"empty"];
-    //debug output
-    NSLog(@"something in here?: %@", self);
 }
 
 - (id)getObjectInCols:(NSUInteger)intCol
