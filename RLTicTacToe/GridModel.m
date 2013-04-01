@@ -54,6 +54,22 @@
     }
 }
 
+
+-(NSString *)checkWinner
+{
+    for (int i=0; i<[self.gridMap count]; i++) {
+        if ([self isOTheWinner:i]) {
+            return @"O is the winner";
+        }else if ([self isXTheWinner:i]){
+            return @"X is the winner";
+        }else if ([self isMapFilledAndDrawGame:i]){
+            return @"Draw Game";
+        }
+    }
+    return @"No Winner";
+}
+
+
 -(NSString *)getHorizontal:(NSUInteger)row
 {
     NSString *itemOne = [self.gridMap getObjectInX:row withY:0];
@@ -84,27 +100,15 @@
         itemTwo = [self.gridMap getObjectInX:1 withY:1];
         itemThree = [self.gridMap getObjectInX:2 withY:2];
     } else {
-        itemOne = [self.gridMap getObjectInX:2 withY:0];
+        itemOne = [self.gridMap getObjectInX:0 withY:2];
         itemTwo = [self.gridMap getObjectInX:1 withY:1];
-        itemThree = [self.gridMap getObjectInX:2 withY:2];
+        itemThree = [self.gridMap getObjectInX:2 withY:0];
     }
     NSString *line = [NSString stringWithFormat:@"%@%@%@",itemOne,itemTwo,itemThree];
     return line;
 }
 
--(NSString *)checkWinner
-{
-    for (int i=0; i<[self.gridMap count]; i++) {
-        if ([self isOTheWinner:i]) {
-            return @"O is the winner";
-        }else if ([self isXTheWinner:i]){
-            return @"X is the winner";
-        }else if ([self isMapFilledAndDrawGame:i]){
-            return @"draw game";
-        }
-    }
-    return @"No Winner";
-}
+
 
 -(BOOL)isOTheWinner:(NSUInteger)item
 {
@@ -131,32 +135,10 @@
             }
         }
     }
-    if (isMapFull) {
-        return true;
-    }else{
-        return false;
-    }
+    return isMapFull;
 }
 
 
--(void)isGameEndedCleanMapCache
-{
-    if ([[self checkWinner] isEqual:@"O is the winner"] ||
-        [[self checkWinner] isEqual:@"X is the winner"]) {
-        [self cleanMapCache];
-    }
-}
-
--(void) cleanMapCache
-{
-    for (int i=0; i<[self.gridMap count]; i++) {
-        for (int j=0; j<[self.gridMap count]; j++) {
-            if ([[self.gridMap getObjectInX:i withY:j] isEqual:@"empty"]) {
-                [self.gridMap setObject:@"GameOver" withX:i withY:j];
-            }
-        }
-    }
-}
 
 
 -(NSString *)checkFirstMover
@@ -197,5 +179,25 @@
     }
 }
 
+
+-(void)isGameEndedCleanMapCache
+{
+    if ([[self checkWinner] isEqual:@"O is the winner"] ||
+        [[self checkWinner] isEqual:@"X is the winner"] ||
+        [[self checkWinner] isEqual:@"Draw Game"]) {
+        [self cleanMapCache];
+        self.gameEnd = true;
+    }
+}
+
+-(void) cleanMapCache
+{
+    for (int i=0; i<[self.gridMap count]; i++) {
+        for (int j=0; j<[self.gridMap count]; j++) {
+                [self.gridMap setObject:@"GameOver" withX:i withY:j];
+            
+        }
+    }
+}
 
 @end

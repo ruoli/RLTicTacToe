@@ -35,6 +35,8 @@
 		18842B731706158B005B77E4 /* GridModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18842B711706158B005B77E4 /* GridModel.m */; };
 		18842B7617067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18842B7517067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m */; };
 		18842B7717067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18842B7517067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m */; };
+		18D8DB1C170A3D2E00C9D6FE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D8DB1B170A3D2E00C9D6FE /* Icon.png */; };
+		18D8DB1E170A3D3200C9D6FE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D8DB1D170A3D3200C9D6FE /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		18842B711706158B005B77E4 /* GridModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridModel.m; sourceTree = "<group>"; };
 		18842B7417067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+MultidimensionalAdditions.h"; sourceTree = "<group>"; };
 		18842B7517067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+MultidimensionalAdditions.m"; sourceTree = "<group>"; };
+		18D8DB1B170A3D2E00C9D6FE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		18D8DB1D170A3D3200C9D6FE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 		18842B26170612EB005B77E4 = {
 			isa = PBXGroup;
 			children = (
+				18D8DB1D170A3D3200C9D6FE /* Icon@2x.png */,
+				18D8DB1B170A3D2E00C9D6FE /* Icon.png */,
 				18842B38170612EB005B77E4 /* RLTicTacToe */,
 				18842B5F170612EB005B77E4 /* RLTicTacToeTests */,
 				18842B31170612EB005B77E4 /* Frameworks */,
@@ -280,6 +286,8 @@
 				1809F15F1708B02A005F03F0 /* gamegrid.png in Resources */,
 				1809F1611708B02A005F03F0 /* bean.png in Resources */,
 				1809F1631708B02A005F03F0 /* cheese.png in Resources */,
+				18D8DB1C170A3D2E00C9D6FE /* Icon.png in Resources */,
+				18D8DB1E170A3D3200C9D6FE /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

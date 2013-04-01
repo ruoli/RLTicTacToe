@@ -16,7 +16,7 @@
 @property(strong,nonatomic)NSString * foodOfGui;
 @property(strong,nonatomic)NSString * foodOfLogic;
 @property(assign,nonatomic)BOOL OsTurn;
-
+@property(assign,nonatomic)BOOL gameEnd;
 
 -(void)setItemOnRow:(int)row
                     onColumn:(int)col
@@ -33,9 +33,11 @@
 
 -(NSString *)checkWinner;
 
--(void)isGameEndedCleanMapCache;
-
 
 -(void)addItemToGridOnX:(NSUInteger)x
                     OnY:(NSUInteger)y;
+
+
+-(void)isGameEndedCleanMapCache;
+
 @end
