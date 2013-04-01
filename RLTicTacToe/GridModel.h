@@ -13,6 +13,11 @@
 
 @property(strong,nonatomic)NSMutableArray *gridMap;
 
+@property(strong,nonatomic)NSString * foodOfGui;
+@property(strong,nonatomic)NSString * foodOfLogic;
+@property(assign,nonatomic)BOOL OsTurn;
+
+
 -(void)setItemOnRow:(int)row
                     onColumn:(int)col
                     withItem:(NSString *)item;
@@ -30,4 +35,7 @@
 
 -(void)isGameEndedCleanMapCache;
 
+
+-(void)addItemToGridOnX:(NSUInteger)x
+                    OnY:(NSUInteger)y;
 @end

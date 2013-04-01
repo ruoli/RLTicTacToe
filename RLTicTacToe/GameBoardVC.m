@@ -50,35 +50,41 @@
 
 - (IBAction)topLeftAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:0 onCol:0] isEqual:@"empty"]) {
-        [self drawItemToBoardOnX:0 OnY:0 WithImageButton:(UIButton *)sender];
+        [self.gridModel addItemToGridOnX:0 OnY:0];
+        
     }
     
 }
 - (IBAction)topMidAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:0 onCol:1] isEqual:@"empty"]) {
-        [self drawItemToBoardOnX:0 OnY:1 WithImageButton:(UIButton *)sender];
+        [self.gridModel addItemToGridOnX:0 OnY:1];
+        
     }
 }
 - (IBAction)topRightAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:0 onCol:2] isEqual:@"empty"]) {
-        [self drawItemToBoardOnX:0 OnY:2 WithImageButton:(UIButton *)sender];
+        [self.gridModel addItemToGridOnX:0 OnY:2];
+        
     }
 
 }
 - (IBAction)midLeftAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:1 onCol:0] isEqual:@"empty"]) {
-        [self drawItemToBoardOnX:1 OnY:0 WithImageButton:(UIButton *)sender];
+        [self.gridModel addItemToGridOnX:1 OnY:0];
+        
     }
 }
 - (IBAction)midMidAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:1 onCol:1] isEqual:@"empty"]) {
-        [self drawItemToBoardOnX:1 OnY:1 WithImageButton:(UIButton *)sender];
+        [self.gridModel addItemToGridOnX:1 OnY:1];
+
     }
 
 }
 - (IBAction)midRightAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:1 onCol:2] isEqual:@"empty"]) {
-        [self drawItemToBoardOnX:1 OnY:2 WithImageButton:(UIButton *)sender];
+        [self.gridModel addItemToGridOnX:1 OnY:2];
+
     }
 }
 - (IBAction)buttonLeftAction:(id)sender {
@@ -103,7 +109,7 @@
 {
     [btn setImage:[UIImage imageNamed:@"cheese.png"] forState:UIControlStateNormal];
     [self.gridModel setItemOnRow:x onColumn:y withItem:@"X"];
-    NSLog(@"at %d%d is %@",x,y,[self.gridModel getItemFromMapOnRow:x onCol:y]);
+  
 }
 
 

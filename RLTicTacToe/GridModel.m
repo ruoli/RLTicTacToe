@@ -19,6 +19,10 @@
     {
         self.gridMap = [[NSMutableArray alloc] initWithX:3 withY:3];
     }
+    
+    self.OsTurn =true;
+     self.foodOfLogic = [self checkFirstMover];
+    
     return self;
 }
 
@@ -153,5 +157,45 @@
         }
     }
 }
+
+
+-(NSString *)checkFirstMover
+{
+    NSString * XOsItemString;
+    for (int i=0; i<[self.gridMap count]; i++) {
+        for (int j=0; j<[self.gridMap count]; j++) {
+            if (![[self.gridMap getObjectInX:i withY:j] isEqual:@"empty"]){
+                return false;
+            }
+        }
+    }
+    self.OsTurn =YES;
+    return XOsItemString = @"O";
+}
+
+-(void)addItemToGridOnX:(NSUInteger)x
+                    OnY:(NSUInteger)y
+{
+    [self takeTheMoveOnX:x OnY:y];
+}
+
+-(void)takeTheMoveOnX:(NSUInteger)x
+                  OnY:(NSUInteger)y
+{
+    if (self.OsTurn) {
+        [self setItemOnRow:x onColumn:y withItem:self.foodOfLogic];
+        self.OsTurn = false;
+        self.foodOfGui = @"O";
+        self.foodOfLogic = @"X";
+        NSLog(@"at %d%d is %@",x,y,[self getItemFromMapOnRow:x onCol:y]);
+    } else{
+        [self setItemOnRow:x onColumn:y withItem:self.foodOfLogic];
+        self.OsTurn = true;
+        self.foodOfGui = @"X";
+        self.foodOfLogic = @"O";
+        NSLog(@"at %d%d is %@",x,y,[self getItemFromMapOnRow:x onCol:y]);
+    }
+}
+
 
 @end

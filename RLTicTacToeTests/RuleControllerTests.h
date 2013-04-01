@@ -7,7 +7,8 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "GridModel.h"
 
 @interface RuleControllerTests : SenTestCase
-
+@property(strong,nonatomic)GridModel *gridmodel;
 @end
