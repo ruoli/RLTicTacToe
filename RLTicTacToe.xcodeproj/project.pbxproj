@@ -13,6 +13,9 @@
 		1809F1621708B02A005F03F0 /* bean.png in Resources */ = {isa = PBXBuildFile; fileRef = 1809F15D1708B02A005F03F0 /* bean.png */; };
 		1809F1631708B02A005F03F0 /* cheese.png in Resources */ = {isa = PBXBuildFile; fileRef = 1809F15E1708B02A005F03F0 /* cheese.png */; };
 		1809F1641708B02A005F03F0 /* cheese.png in Resources */ = {isa = PBXBuildFile; fileRef = 1809F15E1708B02A005F03F0 /* cheese.png */; };
+		1809F16B17090D5C005F03F0 /* GridModel+RuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1809F16A17090D5C005F03F0 /* GridModel+RuleController.m */; };
+		1809F16C17090D5C005F03F0 /* GridModel+RuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1809F16A17090D5C005F03F0 /* GridModel+RuleController.m */; };
+		1809F16F17090E05005F03F0 /* RuleControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1809F16E17090E05005F03F0 /* RuleControllerTests.m */; };
 		18842B33170612EB005B77E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18842B32170612EB005B77E4 /* UIKit.framework */; };
 		18842B35170612EB005B77E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18842B34170612EB005B77E4 /* Foundation.framework */; };
 		18842B37170612EB005B77E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18842B36170612EB005B77E4 /* CoreGraphics.framework */; };
@@ -50,6 +53,10 @@
 		1809F15C1708B02A005F03F0 /* gamegrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamegrid.png; sourceTree = "<group>"; };
 		1809F15D1708B02A005F03F0 /* bean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bean.png; sourceTree = "<group>"; };
 		1809F15E1708B02A005F03F0 /* cheese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cheese.png; sourceTree = "<group>"; };
+		1809F16917090D5C005F03F0 /* GridModel+RuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GridModel+RuleController.h"; sourceTree = "<group>"; };
+		1809F16A17090D5C005F03F0 /* GridModel+RuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GridModel+RuleController.m"; sourceTree = "<group>"; };
+		1809F16D17090E05005F03F0 /* RuleControllerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuleControllerTests.h; sourceTree = "<group>"; };
+		1809F16E17090E05005F03F0 /* RuleControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuleControllerTests.m; sourceTree = "<group>"; };
 		18842B2F170612EB005B77E4 /* RLTicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RLTicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18842B32170612EB005B77E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		18842B34170612EB005B77E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -146,8 +153,8 @@
 		18842B38170612EB005B77E4 /* RLTicTacToe */ = {
 			isa = PBXGroup;
 			children = (
-				18842B41170612EB005B77E4 /* AppDelegate.h */,
-				18842B42170612EB005B77E4 /* AppDelegate.m */,
+				1809F16917090D5C005F03F0 /* GridModel+RuleController.h */,
+				1809F16A17090D5C005F03F0 /* GridModel+RuleController.m */,
 				18842B4A170612EB005B77E4 /* MainStoryboard_iPhone.storyboard */,
 				18842B4D170612EB005B77E4 /* MainStoryboard_iPad.storyboard */,
 				18842B50170612EB005B77E4 /* GameBoardVC.h */,
@@ -164,6 +171,8 @@
 		18842B39170612EB005B77E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18842B41170612EB005B77E4 /* AppDelegate.h */,
+				18842B42170612EB005B77E4 /* AppDelegate.m */,
 				1809F15B170897E4005F03F0 /* pictures */,
 				18842B3A170612EB005B77E4 /* RLTicTacToe-Info.plist */,
 				18842B3B170612EB005B77E4 /* InfoPlist.strings */,
@@ -181,6 +190,8 @@
 			children = (
 				18842B65170612EB005B77E4 /* RLTicTacToeTests.h */,
 				18842B66170612EB005B77E4 /* RLTicTacToeTests.m */,
+				1809F16D17090E05005F03F0 /* RuleControllerTests.h */,
+				1809F16E17090E05005F03F0 /* RuleControllerTests.m */,
 				18842B60170612EB005B77E4 /* Supporting Files */,
 			);
 			path = RLTicTacToeTests;
@@ -317,6 +328,7 @@
 				18842B52170612EB005B77E4 /* GameBoardVC.m in Sources */,
 				18842B721706158B005B77E4 /* GridModel.m in Sources */,
 				18842B7617067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m in Sources */,
+				1809F16B17090D5C005F03F0 /* GridModel+RuleController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +339,8 @@
 				18842B67170612EB005B77E4 /* RLTicTacToeTests.m in Sources */,
 				18842B731706158B005B77E4 /* GridModel.m in Sources */,
 				18842B7717067CE9005B77E4 /* NSMutableArray+MultidimensionalAdditions.m in Sources */,
+				1809F16C17090D5C005F03F0 /* GridModel+RuleController.m in Sources */,
+				1809F16F17090E05005F03F0 /* RuleControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

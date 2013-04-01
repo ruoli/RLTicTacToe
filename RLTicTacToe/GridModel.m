@@ -52,9 +52,9 @@
 
 -(NSString *)getHorizontal:(NSUInteger)row
 {
-    NSString *itemOne = [self.gridMap getObjectInX:0 withY:row];
-    NSString *itemTwo = [self.gridMap getObjectInX:1 withY:row];
-    NSString *itemThree = [self.gridMap getObjectInX:2 withY:row];
+    NSString *itemOne = [self.gridMap getObjectInX:row withY:0];
+    NSString *itemTwo = [self.gridMap getObjectInX:row withY:1];
+    NSString *itemThree = [self.gridMap getObjectInX:row withY:2];
     
     NSString *line = [NSString stringWithFormat:@"%@%@%@",itemOne,itemTwo,itemThree];
     return line;
@@ -62,9 +62,9 @@
 
 -(NSString *)getVertical:(NSUInteger)col
 {
-    NSString *itemOne = [self.gridMap getObjectInX:col withY:0];
-    NSString *itemTwo = [self.gridMap getObjectInX:col withY:1];
-    NSString *itemThree = [self.gridMap getObjectInX:col withY:2];
+    NSString *itemOne = [self.gridMap getObjectInX:0 withY:col];
+    NSString *itemTwo = [self.gridMap getObjectInX:1 withY:col];
+    NSString *itemThree = [self.gridMap getObjectInX:2 withY:col];
     
     NSString *line = [NSString stringWithFormat:@"%@%@%@",itemOne,itemTwo,itemThree];
     return line;
@@ -82,7 +82,7 @@
     } else {
         itemOne = [self.gridMap getObjectInX:2 withY:0];
         itemTwo = [self.gridMap getObjectInX:1 withY:1];
-        itemThree = [self.gridMap getObjectInX:2 withY:0];
+        itemThree = [self.gridMap getObjectInX:2 withY:2];
     }
     NSString *line = [NSString stringWithFormat:@"%@%@%@",itemOne,itemTwo,itemThree];
     return line;

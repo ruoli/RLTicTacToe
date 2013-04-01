@@ -13,17 +13,16 @@
 
 - (id)initWithX:(NSUInteger)x
               withY:(NSUInteger)y{
-    NSUInteger i;
-    NSUInteger j;
+    
     NSMutableArray *map;
     if ((self = [self init])) {
         map = [[NSMutableArray alloc] initWithCapacity:x];
-        for (i=0; i < x; i++) {
-            NSMutableArray *row = [NSMutableArray arrayWithCapacity:y];
-            for (j=0; j < y; j++) {
-                [row insertObject:@"empty" atIndex:j];
+        for (int i=0; i < x; i++) {
+            NSMutableArray *arrayMainRow = [NSMutableArray arrayWithCapacity:y];
+            for (int j=0; j < y; j++) {
+                [arrayMainRow insertObject:@"empty" atIndex:j];
             }
-            [map addObject:row];
+            [map addObject:arrayMainRow];
         }
     }
     
@@ -33,14 +32,14 @@
 - (void)setObject:(NSString *)object
       withX:(NSUInteger)x
          withY:(NSUInteger)y{
-    [[self objectAtIndex:x] replaceObjectAtIndex:y withObject:object];
+    [[self objectAtIndex:y] replaceObjectAtIndex:x withObject:object];
     
 }
 
 - (void)removeObjectAtX:(NSUInteger)x
                     atY:(NSUInteger)y
 {
-    [[self objectAtIndex:x] replaceObjectAtIndex:y withObject:@"empty"];
+    [[self objectAtIndex:y] replaceObjectAtIndex:x withObject:@"empty"];
 }
 
 - (id)getObjectInX:(NSUInteger)x

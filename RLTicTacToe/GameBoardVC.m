@@ -49,50 +49,62 @@
 }
 
 - (IBAction)topLeftAction:(id)sender {
-    [self.topLeftBtn setImage:[UIImage imageNamed:@"cheese.png"] forState:UIControlStateNormal];
-    [self.gridModel setItemOnRow:0 onColumn:0 withItem:@"X"];
-    NSLog(@"at (0,0) is %@",[self.gridModel getItemFromMapOnRow:0 onCol:0]);
+    if ([[self.gridModel getItemFromMapOnRow:0 onCol:0] isEqual:@"empty"]) {
+        [self drawItemToBoardOnX:0 OnY:0 WithImageButton:(UIButton *)sender];
+    }
+    
 }
 - (IBAction)topMidAction:(id)sender {
-    [self.topMidBtn setImage:[UIImage imageNamed:@"cheese.png"] forState:UIControlStateNormal];
-    [self.gridModel setItemOnRow:1 onColumn:0 withItem:@"X"];
-    NSLog(@"at (1,0) is %@",[self.gridModel getItemFromMapOnRow:1 onCol:0]);
+    if ([[self.gridModel getItemFromMapOnRow:0 onCol:1] isEqual:@"empty"]) {
+        [self drawItemToBoardOnX:0 OnY:1 WithImageButton:(UIButton *)sender];
+    }
 }
 - (IBAction)topRightAction:(id)sender {
-    [self.topRightBtn setImage:[UIImage imageNamed:@"cheese.png"] forState:UIControlStateNormal];
-    [self.gridModel setItemOnRow:0 onColumn:2 withItem:@"X"];
-    NSLog(@"at (0,2) is %@",[self.gridModel getItemFromMapOnRow:0 onCol:2]);
+    if ([[self.gridModel getItemFromMapOnRow:0 onCol:2] isEqual:@"empty"]) {
+        [self drawItemToBoardOnX:0 OnY:2 WithImageButton:(UIButton *)sender];
+    }
 
 }
 - (IBAction)midLeftAction:(id)sender {
-    [self.midLeftBtn setImage:[UIImage imageNamed:@"cheese.png"] forState:UIControlStateNormal];
-    [self.gridModel setItemOnRow:0 onColumn:1 withItem:@"X"];
-    NSLog(@"at (0,1) is %@",[self.gridModel getItemFromMapOnRow:0 onCol:1]);
+    if ([[self.gridModel getItemFromMapOnRow:1 onCol:0] isEqual:@"empty"]) {
+        [self drawItemToBoardOnX:1 OnY:0 WithImageButton:(UIButton *)sender];
+    }
 }
 - (IBAction)midMidAction:(id)sender {
-    [self.midMidBtn setImage:[UIImage imageNamed:@"cheese.png"] forState:UIControlStateNormal];
-    [self.gridModel setItemOnRow:1 onColumn:1 withItem:@"X"];
-    NSLog(@"at (1,1) is %@",[self.gridModel getItemFromMapOnRow:1 onCol:1]);
+    if ([[self.gridModel getItemFromMapOnRow:1 onCol:1] isEqual:@"empty"]) {
+        [self drawItemToBoardOnX:1 OnY:1 WithImageButton:(UIButton *)sender];
+    }
 
 }
 - (IBAction)midRightAction:(id)sender {
-    [self.midRightBtn setImage:[UIImage imageNamed:@"cheese.png"] forState:UIControlStateNormal];
-    [self.gridModel setItemOnRow:1 onColumn:2 withItem:@"X"];
-    NSLog(@"at (1,2) is %@",[self.gridModel getItemFromMapOnRow:1 onCol:2]);
+    if ([[self.gridModel getItemFromMapOnRow:1 onCol:2] isEqual:@"empty"]) {
+        [self drawItemToBoardOnX:1 OnY:2 WithImageButton:(UIButton *)sender];
+    }
 }
 - (IBAction)buttonLeftAction:(id)sender {
-    [self.buttonLeftBtn setImage:[UIImage imageNamed:@"cheese.png"] forState:UIControlStateNormal];
-    [self.gridModel setItemOnRow:2 onColumn:0 withItem:@"X"];
-    NSLog(@"at (2,0) is %@",[self.gridModel getItemFromMapOnRow:2 onCol:0]);
+    if ([[self.gridModel getItemFromMapOnRow:2 onCol:0] isEqual:@"empty"]) {
+        [self drawItemToBoardOnX:2 OnY:0 WithImageButton:(UIButton *)sender];
+    }
 }
 - (IBAction)buttonMidAction:(id)sender {
-    [self.buttonMidBtn setImage:[UIImage imageNamed:@"cheese.png"] forState:UIControlStateNormal];
-    [self.gridModel setItemOnRow:2 onColumn:1 withItem:@"X"];
-    NSLog(@"at (2,1) is %@",[self.gridModel getItemFromMapOnRow:2 onCol:1]);
+    if ([[self.gridModel getItemFromMapOnRow:2 onCol:1] isEqual:@"empty"]) {
+        [self drawItemToBoardOnX:2 OnY:1 WithImageButton:(UIButton *)sender];
+    }
 }
 - (IBAction)buttonRightAction:(id)sender {
-    [self.buttonRightBtn setImage:[UIImage imageNamed:@"cheese.png"] forState:UIControlStateNormal];
-    [self.gridModel setItemOnRow:2 onColumn:2 withItem:@"X"];
-    NSLog(@"at (2,2) is %@",[self.gridModel getItemFromMapOnRow:2 onCol:2]);
+    if ([[self.gridModel getItemFromMapOnRow:2 onCol:2] isEqual:@"empty"]) {
+        [self drawItemToBoardOnX:2 OnY:2 WithImageButton:(UIButton *)sender];
+    }
 }
+
+- (void)drawItemToBoardOnX:(NSUInteger)x
+                       OnY:(NSUInteger)y
+           WithImageButton:(UIButton *)btn
+{
+    [btn setImage:[UIImage imageNamed:@"cheese.png"] forState:UIControlStateNormal];
+    [self.gridModel setItemOnRow:x onColumn:y withItem:@"X"];
+    NSLog(@"at %d%d is %@",x,y,[self.gridModel getItemFromMapOnRow:x onCol:y]);
+}
+
+
 @end
