@@ -29,7 +29,7 @@
     return map;
 }
 
-- (void)setObject:(NSString *)object
+- (void)setObject:(id)object
       withX:(NSUInteger)x
          withY:(NSUInteger)y{
     [[self objectAtIndex:y] replaceObjectAtIndex:x withObject:object];

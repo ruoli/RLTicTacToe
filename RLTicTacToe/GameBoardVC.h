@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "GridModel.h"
+#import "NSMutableArray+MultidimensionalAdditions.h"
+#import "NPCMaker.h"
 
 @interface GameBoardVC : UIViewController
 //top
@@ -40,8 +42,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonRightBtn;
 - (IBAction)buttonRightAction:(id)sender;
 
-
 @property(strong,nonatomic)GridModel *gridModel;
+
+- (IBAction)goBackBtn:(id)sender;
+
+- (IBAction)reset:(id)sender;
+
 
 
 @end

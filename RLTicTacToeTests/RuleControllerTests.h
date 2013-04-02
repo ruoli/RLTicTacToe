@@ -8,7 +8,8 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import "GridModel.h"
-
+#import "NPCMaker.h"
 @interface RuleControllerTests : SenTestCase
 @property(strong,nonatomic)GridModel *gridmodel;
+@property(strong,nonatomic)NPCMaker * npc;
 @end

@@ -15,7 +15,7 @@
 - (id)initWithX:(NSUInteger)x
               withY:(NSUInteger)y;
 
-- (void)setObject:(NSString *)object
+- (void)setObject:(id)object
       withX:(NSUInteger)x
          withY:(NSUInteger)y;
 

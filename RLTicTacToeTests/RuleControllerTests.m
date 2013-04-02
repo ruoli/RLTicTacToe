@@ -15,6 +15,7 @@
     [super setUp];
     
     self.gridmodel = [[GridModel alloc] init];
+    self.npc = [[NPCMaker alloc] init];
 }
 
 //-(void)testInitStateCheckRdyToPlay
@@ -38,4 +39,12 @@
     STAssertEqualObjects(s3, @"O", @"test move logic");
     
 }
+
+//-(void)testNPCgenerator
+//{
+//    NSUInteger x =[self.npc npcOnX];
+//    NSUInteger y = [self.npc npcOnY];
+//    STAssertTrue(x == 0, @"test on x");
+//    STAssertTrue(y == 0, @"test on y");
+//}
 @end
