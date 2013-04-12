@@ -42,6 +42,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonRightBtn;
 - (IBAction)buttonRightAction:(id)sender;
 
+@property(assign,nonatomic)BOOL npcShouldPlay;
 @property(strong,nonatomic)GridModel *gridModel;
 
 - (IBAction)goBackBtn:(id)sender;

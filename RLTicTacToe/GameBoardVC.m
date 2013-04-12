@@ -52,20 +52,27 @@
 - (IBAction)topLeftAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:0 onCol:0] isEqual:@"empty"]) {
         [self gameStatusOberser:0 :0 :(UIButton*)sender];
-        [self npcMoves];
+        if (self.npcShouldPlay == TRUE) {
+            [self npcMoves];
+        }
+    
     }
     
 }
 - (IBAction)topMidAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:0 onCol:1] isEqual:@"empty"]) {
         [self gameStatusOberser:0 :1 :(UIButton*)sender];
-        [self npcMoves];
+        if (self.npcShouldPlay == TRUE) {
+            [self npcMoves];
+        }
     }
 }
 - (IBAction)topRightAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:0 onCol:2] isEqual:@"empty"]) {
         [self gameStatusOberser:0 :2 :(UIButton*)sender];
-        [self npcMoves];
+        if (self.npcShouldPlay == TRUE) {
+            [self npcMoves];
+        }
     }
 }
 
@@ -73,20 +80,26 @@
 - (IBAction)midLeftAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:1 onCol:0] isEqual:@"empty"]) {
         [self gameStatusOberser:1 :0 :(UIButton*)sender];
-        [self npcMoves];
+        if (self.npcShouldPlay == TRUE) {
+            [self npcMoves];
+        }
     }
 }
 - (IBAction)midMidAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:1 onCol:1] isEqual:@"empty"]) {
         [self gameStatusOberser:1 :1 :(UIButton*)sender];
-        [self npcMoves];
+        if (self.npcShouldPlay == TRUE) {
+            [self npcMoves];
+        }
     }
 
 }
 - (IBAction)midRightAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:1 onCol:2] isEqual:@"empty"]) {
         [self gameStatusOberser:1 :2 :(UIButton*)sender];
-        [self npcMoves];
+        if (self.npcShouldPlay == TRUE) {
+            [self npcMoves];
+        }
     }
 }
 
@@ -94,19 +107,25 @@
 - (IBAction)buttonLeftAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:2 onCol:0] isEqual:@"empty"]) {
         [self gameStatusOberser:2 :0 :(UIButton*)sender];
-        [self npcMoves];
+        if (self.npcShouldPlay == TRUE) {
+            [self npcMoves];
+        }
     }
 }
 - (IBAction)buttonMidAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:2 onCol:1] isEqual:@"empty"]) {
         [self gameStatusOberser:2 :1 :(UIButton*)sender];
-        [self npcMoves];
+        if (self.npcShouldPlay == TRUE) {
+            [self npcMoves];
+        }
     }
 }
 - (IBAction)buttonRightAction:(id)sender {
     if ([[self.gridModel getItemFromMapOnRow:2 onCol:2] isEqual:@"empty"]) {
         [self gameStatusOberser:2 :2 :(UIButton*)sender];
-        [self npcMoves];
+        if (self.npcShouldPlay == TRUE) {
+            [self npcMoves];
+        }
     }
 }
 
