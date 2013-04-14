@@ -12,6 +12,7 @@
 #import "NPCMaker.h"
 
 @interface GameBoardVC : UIViewController
+
 //top
 @property (weak, nonatomic) IBOutlet UIButton *topLeftBtn;
 - (IBAction)topLeftAction:(id)sender;
@@ -42,6 +43,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonRightBtn;
 - (IBAction)buttonRightAction:(id)sender;
 
+
+//other properties
 @property(assign,nonatomic)BOOL npcShouldPlay;
 @property(strong,nonatomic)GridModel *gridModel;
 
